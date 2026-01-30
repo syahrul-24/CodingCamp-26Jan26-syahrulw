@@ -1,0 +1,367 @@
+/* Global Styles */
+:root {
+    --primary-color: #f7df1e; /* Yellow from Revo logo */
+    --secondary-color: #2c3e50;
+    --text-color: #333;
+    --bg-color: #f8f9fa;
+    --white: #ffffff;
+    --glass-bg: rgba(255, 255, 255, 0.8);
+    --border-color: #ddd;
+    --transition: all 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Outfit', sans-serif;
+    color: var(--text-color);
+    line-height: 1.6;
+    background-color: var(--bg-color);
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+h1, h2, h3 {
+    margin-bottom: 20px;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Navbar */
+header {
+    background: var(--glass-bg);
+    backdrop-filter: blur(10px);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.navbar {
+    padding: 1rem 0;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    height: 50px;
+    border-radius: 50%;
+}
+
+.nav-menu {
+    display: flex;
+    gap: 15px;
+}
+
+.nav-menu li a {
+    padding: 8px 15px;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+.nav-menu li a:hover, .nav-menu li a.active {
+    background-color: var(--primary-color);
+    color: #000;
+    border-color: var(--primary-color);
+}
+
+/* Hero Section */
+.hero {
+    padding: 60px 0;
+}
+
+.hero-content h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.hero-image {
+    margin-top: 20px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.hero-image img {
+    width: 100%;
+    display: block;
+}
+
+/* Headquarters */
+.headquarters {
+    padding: 80px 0;
+    text-align: center;
+    background-color: var(--white);
+    border-top: 1px solid var(--border-color);
+}
+
+.section-title {
+    font-size: 2rem;
+    margin-bottom: 40px;
+    position: relative;
+    display: inline-block;
+}
+
+.section-title::after {
+    content: '';
+    width: 50px;
+    height: 3px;
+    background: var(--primary-color);
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.hq-grid {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+.hq-card {
+    text-align: center;
+}
+
+.circle {
+    width: 150px;
+    height: 150px;
+    border: 2px solid var(--text-color);
+    border-radius: 50%;
+    margin: 0 auto 15px;
+    transition: var(--transition);
+}
+
+.hq-card:hover .circle {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    transform: scale(1.05);
+}
+
+.hq-card p {
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+/* Message Us Form */
+.message-section {
+    padding: 80px 0;
+    border-top: 1px solid var(--border-color);
+}
+
+.form-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    background: var(--white);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 1rem;
+}
+
+.radio-group {
+    display: flex;
+    gap: 20px;
+    padding: 10px 0;
+}
+
+.radio-group label {
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+}
+
+#submitBtn {
+    width: 100%;
+    padding: 15px;
+    background-color: var(--primary-color);
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+#submitBtn:hover {
+    background-color: #edd100;
+    transform: translateY(-2px);
+}
+
+.result-box {
+    background: #f1f1f1;
+    padding: 30px;
+    border-radius: 10px;
+    border: 1px dashed #aaa;
+}
+
+.result-box h3 {
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+#resultContent p {
+    margin-bottom: 10px;
+    word-break: break-all;
+}
+
+/* Profile Page */
+.profile-banner {
+    height: 40vh;
+    background: url('../assets/hero.png') center/cover no-repeat;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--white);
+}
+
+.banner-overlay {
+    background: rgba(0,0,0,0.5);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile-banner h1 {
+    font-size: 3.5rem;
+    margin-bottom: 10px;
+}
+
+.about-us {
+    padding: 80px 0;
+    background: var(--white);
+}
+
+.about-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.about-content p {
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+}
+
+.vision-mission {
+    padding: 80px 0;
+    background: var(--bg-color);
+}
+
+.vm-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.vm-card {
+    background: var(--white);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    border-left: 5px solid var(--primary-color);
+}
+
+.vm-card h3 {
+    color: var(--secondary-color);
+    margin-bottom: 15px;
+}
+
+.vm-card ul {
+    padding-left: 20px;
+}
+
+.vm-card ul li {
+    list-style: disc;
+    margin-bottom: 10px;
+}
+
+/* Footer */
+footer {
+    padding: 30px 0;
+    background: var(--secondary-color);
+    color: var(--white);
+    text-align: right;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .form-container, .vm-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-menu {
+        display: none; /* Mobile menu logic can be added, but simple link list is safer for now */
+    }
+    
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+    
+    .circle {
+        width: 120px;
+        height: 120px;
+    }
+}
